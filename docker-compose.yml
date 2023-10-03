@@ -38,7 +38,4 @@ services:
     container_name: vprofileweb
     ports:
       - '80:80'
-  volumes:
-    vproappdata: {}
-    vprodbdata: {}
 
