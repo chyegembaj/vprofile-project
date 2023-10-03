@@ -6,7 +6,7 @@ services:
     image: chyegembaj/vprofiledb
     container_name: vprodb
     ports:
-      - '3306:3306'
+      - 3306:3306
     volumes:
       - vprodbdata:/var/lib/mysql
     environment:
@@ -14,11 +14,11 @@ services:
   vprocache01:
     image: memcached
     ports:
-      - '11211:11211'
+      - 11211:11211
   vpromq01:
     image: rabbitmq
     ports:
-      - '15672:15672'
+      - 15672:15672
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
@@ -28,7 +28,7 @@ services:
     image: chyegembaj/vprofileapp
     container_name: vprofileapp
     ports:
-      - '8082:8082'
+      - 8082:8082
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
   vproweb:
@@ -37,7 +37,7 @@ services:
     image: chyegembaj/vprofileweb
     container_name: vprofileweb
     ports:
-      - '80:80'
+      - 80:80
 volumes:
   vproappdata: 
   vprodbdata: 
