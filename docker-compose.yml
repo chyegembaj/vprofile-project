@@ -28,7 +28,7 @@ services:
     image: chyegembaj/vprofileapp
     container_name: vprofileapp
     ports:
-      - '8080:8080'
+      - '8080:8082'
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
   vproweb:
