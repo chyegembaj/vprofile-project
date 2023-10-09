@@ -3,7 +3,7 @@ RUN apt update && apt install maven -y
 RUN git clone https://github.com/devopshydclub/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
-FROM --platform=linux/arm64,linux/amd64 tomcat:9-jre11
+FROM tomcat:9-jre11
 LABEL "Project"="Vprofile"
 LABEL "AUthor"="Chidimma"
 
